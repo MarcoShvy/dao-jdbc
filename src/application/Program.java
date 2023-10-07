@@ -1,10 +1,16 @@
 package application;
 
-import java.text.ParseException;
+import entites.Department;
+import entites.Seller;
+
+import java.util.Date;
 
 public class Program {
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args){
 
+        Department obj = new Department(1, "TI");
 
+        Seller seller = new Seller(11, "Bob", "bob@gmail.com", new Date(), 3000.0, obj);
+        
     }
 }
