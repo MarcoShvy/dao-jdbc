@@ -41,21 +41,21 @@ public class Program {
             System.out.println(seller1);
         }
 
-//        System.out.println("\n=== TEST 4: seller insert ===");
-//        Seller newSeller = new Seller();
-//        sc.nextLine();
-//        System.out.print("Name: ");
-//        newSeller.setName(sc.nextLine());
-//        System.out.print("Email: ");
-//        newSeller.setEmail(sc.nextLine());
-//        System.out.print("Data nascimento(dd/MM/yyyy): ");
-//        newSeller.setBirthDate(sdt.parse(sc.nextLine()));
-//        System.out.print("Base Salary: ");
-//        newSeller.setBaseSalary(sc.nextDouble());
-//        System.out.print("Department (1-4): ");
-//        newSeller.setDepartment(new Department(sc.nextInt(), null));
-//        sellerDao.insert(newSeller);
-//        System.out.println("Inserted! new Id = "+ newSeller.getId());
+        System.out.println("\n=== TEST 4: seller insert ===");
+        Seller newSeller = new Seller();
+        sc.nextLine();
+        System.out.print("Name: ");
+        newSeller.setName(sc.nextLine());
+        System.out.print("Email: ");
+        newSeller.setEmail(sc.nextLine());
+        System.out.print("Data nascimento(dd/MM/yyyy): ");
+        newSeller.setBirthDate(sdt.parse(sc.nextLine()));
+        System.out.print("Base Salary: ");
+        newSeller.setBaseSalary(sc.nextDouble());
+        System.out.print("Department (1-4): ");
+        newSeller.setDepartment(new Department(sc.nextInt(), null));
+        sellerDao.insert(newSeller);
+        System.out.println("Inserted! new Id = "+ newSeller.getId());
 
         System.out.println("\n=== TEST 5: seller update ===");
         System.out.printf("Qual id deseja mudar: ");
@@ -87,5 +87,12 @@ public class Program {
         }
         sellerDao.update(seller);
         System.out.println("Update completed");
+
+        System.out.println("\n=== TEST 6: seller delete ===");
+        System.out.printf("Enter id for delete test: ");
+        sellerDao.deleteById(sc.nextInt());
+        System.out.println("Delete completed");
+
+        sc.close();
     }
 }
