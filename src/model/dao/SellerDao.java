@@ -2,6 +2,7 @@ package model.dao;
 
 import model.entites.Seller;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface SellerDao {
